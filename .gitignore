@@ -1,0 +1,26 @@
+# Gradle
+.gradle/
+build/
+*.gradle.kts.backup
+
+# Android Studio
+.idea/
+*.iml
+local.properties
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Kotlin
+*.kotlin_module
+
+# Schemas (commit these for Room migration tracking)
+# app/schemas/
+
+# APK/AAB
+*.apk
+*.aab
+*.ap_
+app/release/
