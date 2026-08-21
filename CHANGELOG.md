@@ -5,6 +5,40 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2026-08-21
+
+### Added
+- **Two-Phase Reset & Removal Challenge**: Gated the home screen app countdown reset (long-press) and app removal in settings behind the full Two-Phase Challenge:
+  - **Phase 1**: 150 circular taps with haptic feedback and real-time counter.
+  - **Phase 2**: Mindful pledge writing popup dialog with live word-by-word comparison and error detection.
+  - Reset and removal actions are strictly blocked until both phases are completed 100%.
+
+### Fixed
+- **Countdown Banner Appearance & Centering**: Fixed Pill and Bold countdown banners to be centered horizontally at the top of the screen with a proper compact pill (stadium) shape instead of filling full screen width.
+- **Top App Bar / Notch Spacing**: Resolved double status bar insets across `Apps`, `Charts`, and `Settings` screens, eliminating the excessive top gap and aligning headings directly below the device notch/cutout.
+
+## [1.1.0] - 2026-08-21
+
+### Added
+- **Blocking Overlay Dismissal & Close App**: Added a prominent "Close app" button and top-right close (X) icon to the blocking screen for immediate return to the Home launcher.
+- **Hardware & Gesture Back Button Handling**: Intercepted `KeyEvent.KEYCODE_BACK` on full-screen overlay views to safely dismiss blocking dialogs without trapping users.
+- **WindowManager Lifecycle Safeguards**: Wrapped all window addition and removal operations in error-handled boundaries to prevent system service crashes.
+
+### Fixed
+- **Writing Challenge on Countdown Reset**: Long-pressing an app now strictly presents the `WritingChallengeDialog` pledge popup, ensuring timer resets cannot be performed without completing the full writing challenge.
+- **Overlay Lingering Bug**: Ensured that leaving a protected app immediately dismisses all blocking and warning overlays from non-protected apps and the Home screen.
+- **Accurate Timing Labels**: Improved time string formatting so reset applications accurately display 0m usage instead of rounded fractions.
+
+## [1.0.1] - 2026-08-21
+
+### Changed
+- **Transient Usage Notification**: Removed continuous idle "Stop me is active" notification. The notification is now displayed strictly while a protected application is actively in use and is immediately dismissed when switching to other apps or returning to the home screen.
+- **Application Display Name**: Updated branding and string references from "Stop-me" to "Stop me".
+- **Settings Architecture**: Relocated the protected apps management list inside a dedicated "Apps" action popup under the Data section.
+
+### Fixed
+- **Countdown Reset Synchronization**: Fixed issue where in-memory elapsed timing sessions in `ForegroundAppTracker` were not pausing upon opening the app, ensuring that tapping "Reset" in the countdown dialog reliably resets today's usage back to 0.
+
 ## [1.0.0] - 2026-08-21
 
 ### Added
