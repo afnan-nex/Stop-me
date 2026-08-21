@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Stop-me launcher icon foreground: stylized STOP hand -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group android:translateX="20" android:translateY="16">
+        <!-- Palm -->
+        <path
+            android:fillColor="#E8E8F0"
+            android:pathData="M54,26 C54,26 54,18 47,18 C40,18 40,26 40,26 L40,42 C40,42 36,40 33,42 C30,44 31,50 34,52 L46,64 C48,66 50,76 54,76 C58,76 60,66 62,64 L74,52 C77,50 78,44 75,42 C72,40 68,42 68,42 L68,26 C68,26 68,18 61,18 C54,18 54,26 54,26 Z" />
+        <!-- Stop text -->
+        <path
+            android:fillColor="#1A1A2E"
+            android:pathData="M42,44 L44,44 L44,52 L46,52 L46,44 L48,44 L48,42 L42,42 Z
+                              M50,42 L50,52 L56,52 L56,50 L52,50 L52,48 L55,48 L55,46 L52,46 L52,44 L56,44 L56,42 Z
+                              M58,42 L58,52 L60,52 L60,48 L61,48 L63,52 L65,52 L63,47.5 C64.2,47 65,46 65,44.5 C65,43 64,42 62,42 Z M60,44 L61.5,44 C62.5,44 63,44.5 63,45.5 C63,46.5 62.5,47 61.5,47 L60,47 Z" />
+    </group>
+</vector>
